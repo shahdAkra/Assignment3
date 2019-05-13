@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)
-       // mAdapter = new MyAdapter(myDataset);
-        recyclerView.setAdapter(mAdapter);
+        //TODO: mAdapter = new MyAdapter(myDataset); myDataset recyclerView.setAdapter(mAdapter);
 
 
 

@@ -6,7 +6,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private String[] mDataset;
+    private String[] names;
+    private String[] contents;
+    private int[] imageIds;
+
+    public MyAdapter(String[] names,String[] contents, int[] imageIds ){
+        this.names = names;
+        this.contents = contents;
+        this.imageIds = imageIds;
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -20,10 +28,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
-        mDataset = myDataset;
-    }
+
 
     // Create new views (invoked by the layout manager)
     @Override
@@ -42,6 +47,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        //TODO: here we must connect the card with the recyclerview and here we can find the onClick of the card.
         holder.textView.setText(mDataset[position]);
 
     }
