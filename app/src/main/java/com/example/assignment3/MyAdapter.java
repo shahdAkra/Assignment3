@@ -13,7 +13,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyAdapter(String[] names,String[] contents, int[] imageIds ){
         this.names = names;
         this.contents = contents;
-        this.imageIds = imageIds;
+        this.imageIds = imahgeIds;
     }
 
     // Provide a reference to the views for each data item
